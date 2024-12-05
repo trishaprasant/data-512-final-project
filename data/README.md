@@ -72,7 +72,7 @@ This dataset includes preprocessed wildfire data relevant to Hartford.
 
 ## **3. Raw Data**
 ### `Real_Estate_Sales_2001-2022_GL_20241117.csv`
-This raw dataset includes real estate sales data for Connecticut from 2001 to 2022.
+This raw dataset includes real estate sales data for Connecticut from 2001 to 2022. This data is too large to be stored in Github, please visit the [Connecticut Real Estate Sales Database](https://aqs.epa.gov/aqsweb/documents/data_api.html) to download this data.
 
 | **Column**          | **Description**                                                                 |
 |----------------------|---------------------------------------------------------------------------------|
@@ -93,8 +93,7 @@ This raw dataset includes real estate sales data for Connecticut from 2001 to 20
 
 
 ### `USGS_Wildland_Fire_Combined_Dataset.json`
-This raw dataset includes wildfire data for the U.S. and its territories from 1961 to 2021. The dataset includes:
-- Fire size, type, and name.
-- Geographic location (latitude, longitude).
-- Discovery, start, and end dates.
-- Distance to key reference points (e.g., Hartford, CT).
+This raw dataset includes wildfire data for the U.S. and its territories from 1961 to 2021. This data is also too large to be stored in Github, please visit the [USGS Combined wildland fire datasets](https://www.sciencebase.gov/catalog/item/61aa537dd34eb622f699df81), to download this data. The dataset includes:
+- Fire size, type, and name
+- Geographic location (latitude, longitude)
+- Discovery, start, and end dates of wildfires
