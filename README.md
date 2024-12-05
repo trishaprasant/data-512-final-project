@@ -41,22 +41,20 @@ Real estate data was sourced from **Connecticut Real Estate Sales Data** and inc
   - `median_sale_amount`: Median property sale price.
   - `sale_date`: Date of the transaction.
 
-The raw real estate dataset is too large to be store in Github. Please visit the [Connecticut Real Estate Sales Database](https://aqs.epa.gov/aqsweb/documents/data_api.html) to download this data.
+The raw real estate dataset is too large to be stored in Github. Please visit the [Connecticut Real Estate Sales Database](https://aqs.epa.gov/aqsweb/documents/data_api.html) to download this data.
 
-## **Data Processing**
-The data processing and cleaning steps are documented in the following notebooks:
-1. **`wildfire_common_analysis.ipynb`**:
-   - Cleans and preprocesses wildfire and AQI datasets.
-   - Calculates smoke impact using a weighted formula:
-     ```markdown
-      Smoke Impact = (Fire Size (acres) × Days Burning) / (Distance (miles)^2)
-      ```
-   - Integrates lag variables to capture delayed effects.
-2. **`wildfire_real_estate_processing.ipynb`**:
-   - Merges processed wildfire, AQI, and real estate datasets.
-   - Creates cumulative smoke impact estimates and yearly transaction volumes.
+## **Notebooks Used**
+The data processing and cleaning steps are outlined in the following notebooks:
+   - **`wildfire_common_analysis.ipynb`:**  
+   Preprocesses wildfire and AQI datasets, calculates smoke impact using a weighted formula, and generates lag variables to account for delayed effects.
 
-Intermediate datasets (`enhanced_data.csv`, `processed_wildfire_data.csv`, and `processed_aqi_data.csv`) are stored in the `data/processed` folder.
+   - **`wildfire_real_estate_processing.ipynb`:**  
+   Merges the processed wildfire and AQI datasets with real estate data, calculates cumulative smoke impact estimates, and generates yearly transaction volumes.
+
+   - **`finished_analysis.ipynb`:**  
+   Conducts regression analysis and time series forecasting to evaluate the relationship between wildfire smoke, air quality, and real estate metrics. Visualizations and final insights are generated in this notebook.
+
+Intermediate datasets produced from these notebooks (`aqi_data.csv`, `filtered_real_estate_df.csv`, and `selected_processed_wildfires2.csv`) are saved in the `data/intermediate` folder for further analysis. The final dataset used for the model : `enhanced_data.csv` is stored in the `data/final` folder.  
 
 ## **Methodology**
 The analysis follows these steps:
@@ -77,12 +75,13 @@ The analysis follows these steps:
 - **Forecasts**:
   - Projected cumulative smoke impacts show high variability, emphasizing the need for adaptive planning.
   - Property value forecasts reveal periodic dips during years of high smoke exposure.
+- To read more about my results please the `docs/` folder with writeups about my exploratory analysis (`common_analysis_visualizations_reflections.pdf`) and my final report (`DATA 512_ Final Written Report.pdf`)
 
 ## **Visualizations**
-Key figures include:
+Key figures are stored in the `visuals/` folder. They include:
 1. **Annual Cumulative Smoke Impact**: Historical trends in smoke exposure over time.
 2. **Relationship Between Smoke Impact and Property Values**: Scatterplot showing weak correlations but notable patterns.
-3. **25-Year Forecast of Smoke Impacts**: Forecasted trends with confidence intervals.
+3. **10-Year Forecast of Smoke Impacts**: Forecasted trends with confidence intervals.
 
 ## **Reproducibility**
 To reproduce the analysis:
@@ -94,10 +93,10 @@ To reproduce the analysis:
    ```
    pip install -r requirements.txt
    ```
-3. Run the notebooks in sequence (make sure to update relevant fields with your desired information):
+3. Run the notebooks in sequence (make sure to update the relevant fields, as prompted in the directions with your desired information):
    - `wildfire_common_analysis.ipynb`
    - `wildfire_real_estate_processing.ipynb`
-4. All intermediate and processed datasets are stored in the `data/processed` folder.
+   - `finished_analysis.ipynb`
 
 ## **License**
 This code example was developed by Trisha Prasant for use in DATA 512, a course in the UW MS Data Science degree program. The code is available under the MIT License. See the `LICENSE` file for more details. 

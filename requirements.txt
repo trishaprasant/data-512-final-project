@@ -1,0 +1,30 @@
+# Core libraries for data manipulation and analysis
+pandas==1.5.3
+numpy==1.24.2
+
+# Visualization libraries
+matplotlib==3.6.3
+seaborn==0.12.2
+
+# Statistical modeling and forecasting
+statsmodels==0.13.5
+scipy==1.10.1
+
+# Machine learning and regression analysis
+scikit-learn==1.2.2
+xgboost==1.7.4
+
+# API requests and data access
+requests==2.28.2
+
+# Geospatial computations
+geopy==2.3.0
+
+# Jupyter Notebook (for running the project)
+notebook==6.5.4
+
+# For handling date and time processing
+python-dateutil==2.8.2
+
+# Additional utility libraries
+tqdm==4.64.1
