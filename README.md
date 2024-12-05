@@ -9,17 +9,16 @@ This project investigates the relationship between wildfire smoke and its impact
 3. Use SARIMAX models to forecast future smoke impacts and property value trends.
 4. Provide actionable recommendations for mitigating wildfire impacts.
 
----
-
 ## **Data Sources**
 The three following data sources were used during this project. These datasets were manipulated, cleaned and filterd muliple times during this project. If you would like to view all of these datasets along with their corresponding data dictionaries, please navigate to the `/data` folder of this repository.
+
 ### **1. Wildfire Data**
 Wildfire data was obtained from the [Combined Wildland Fire](https://www.sciencebase.gov/catalog/item/61aa537dd34eb622f699df81) datasets, focusing on wildfires that:
 - Occurred within 650 miles of Hartford, CT.
 - Were recorded between 1961 and 2021.
 - Took place during the wildfire season (May 1st – October 31st).
 
-This data is processed and stored in the dataset `selected_processed_wildfires2.csv`, located in the `data/intermediate` folder of this repository. Key fields include:
+This data is processed and stored in `selected_processed_wildfires2.csv`, located in the `data/intermediate` folder of this repository. Some key fields include:
 - `year`: The year of the wildfire.
 - `discovery_date`: The date the wildfire was reported.
 - `fire_name`: The name of the wildfire.
@@ -34,17 +33,15 @@ Air quality data was collected from the [US EPA AQS API](https://aqs.epa.gov/aqs
 - **Frequency**: Daily AQI summaries by county.
 - **Format**: Tabular data with date, pollutant type, and AQI values.
 
-To access this data, an EPA AQS API key is required. The processed AQI dataset is stored in the dataset `aqi_data.csv` is available in the `data/intermediate` folder.
+To access this data, an EPA AQS API key is required. The processed AQI dataset is stored in `aqi_data.csv` located in the `data/intermediate` folder.
 
 ### **3. Real Estate Data**
-Real estate data was sourced from **Connecticut Real Estate Sales Data** and includes:
-- **Fields**:
+Real estate data was sourced from **Connecticut Real Estate Sales Data** and includes information about the:
   - `transaction_volume`: Total sales volume per year.
   - `median_sale_amount`: Median property sale price.
   - `sale_date`: Date of the transaction.
-- **Processing**:
-   The raw real estate dataset is stored in the dataset `Real_Estate_Sales_2001-2022_GL_20241117.csv`is available in the `data/raw` folder.
----
+
+The raw real estate dataset is too large to be store in Github. Please visit the [Connecticut Real Estate Sales Database](https://aqs.epa.gov/aqsweb/documents/data_api.html) to download this data.
 
 ## **Data Processing**
 The data processing and cleaning steps are documented in the following notebooks:
@@ -111,5 +108,4 @@ The datasets used in this project partly derived from the EPA AQS API which is s
 - **Wildfire Data**: [USGS Combined Wildland Fire Dataset](https://www.sciencebase.gov/catalog/item/61aa537dd34eb622f699df81).
 - **Air Quality Data**: [EPA AQS API](https://aqs.epa.gov/aqsweb/documents/data_api.html).
 - **Real Estate Data**: [Connecticut Real Estate Sales Database](https://aqs.epa.gov/aqsweb/documents/data_api.html).
-
-To the Instructors of the DATA 512 Course! Thank you for a great quarter :)
+- To the Instructors of the UW MSDS DATA 512 Course! Thank you for a great quarter :)
