@@ -23,8 +23,6 @@ This file contains the final dataset used for regression and forecasting analyse
 | `transaction_volume`     | Total volume of real estate transactions during the year.                       |
 | `transaction_volume_lag` | Real estate transaction volume from the previous year.                          |
 
----
-
 ## **2. Intermediate Data**
 ### `aqi_data.csv`
 This dataset contains daily air quality data for Hartford, CT.
@@ -71,8 +69,6 @@ This dataset includes preprocessed wildfire data relevant to Hartford.
 | `days_burning`          | Total number of days the wildfire burned.                                      |
 | `smoke_impact`          | Calculated annual smoke impact based on wildfire size, duration, and distance. |
 | `normalized_smoke_impact`| Smoke impact normalized to a standard scale for comparison.                   |
-
----
 
 ## **3. Raw Data**
 ### `Real_Estate_Sales_2001-2022_GL_20241117.csv`
